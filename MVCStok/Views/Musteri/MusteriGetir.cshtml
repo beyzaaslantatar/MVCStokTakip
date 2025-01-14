@@ -1,0 +1,21 @@
+﻿@model MVCStok.Models.Entity.TBLMUSTERILER
+@{
+    ViewBag.Title = "MusteriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@using (Html.BeginForm("Guncelle", "Musteri", FormMethod.Post))
+  {
+        <div class="form-group">
+            @Html.LabelFor(m => m.musteriID)
+            @Html.TextBoxFor(m => m.musteriID, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(m => m.musteriAd)
+            @Html.TextBoxFor(m => m.musteriAd, new { @class = "form-control" })
+            <br />
+            @Html.LabelFor(m => m.musteriSoyad)
+            @Html.TextBoxFor(m => m.musteriSoyad, new { @class = "form-control" })
+        </div>
+        <div>
+            <button class="btn btn-light">Güncelle</button>
+        </div>
+  }
